@@ -15,6 +15,23 @@ Written in plain **C99**. No .NET, no Mono, no dnSpy, no libraries. It parses th
 
 When you start modding a game you need to know *what is in it*: which classes exist, what the player class stores, which fields are `static`, which methods you can hook, which values are constants. dnmeta answers that in seconds, without opening a decompiler and without running the game.
 
+
+### DIRECTORY_INDEX
+The search-driven catalog of every type. Type a query and get matching classes and members grouped by class, filter by `public` / `static` / `const`, narrow by namespace or assembly, and open any type for its fields, properties, methods and events. Every row has copy buttons: member name, C# snippet, or a ready Harmony patch.
+
+![directory index](docs/demo2.gif)
+
+### EXPLOIT_HOOKS
+A shortcut list of the variables and functions modders look for first. dnmeta scans all members for common names (health, speed, ammo, money, damage, kill, stamina, score...) and groups them into boolean flags, numeric stats and critical functions, so you can start from the interesting parts of the game instead of thousands of types.
+
+![exploit hooks](docs/demo3.gif)
+
+### NAMESPACES
+A map of all namespaces with the number of types in each. Click one to browse its types.
+
+![namespaces](docs/demo4.gif)
+
+
 ## Features
 
 - Walks the whole game folder: finds `<Game>_Data/Managed` automatically (also `.app` bundles), or takes a `Managed` folder, or a single `.dll`
