@@ -9,7 +9,7 @@ dnmeta reads `Assembly-CSharp.dll` (and any other managed DLL) straight from the
 
 Written in plain **C99**. No .NET, no Mono, no dnSpy, no libraries. It parses the PE / CLI metadata tables (ECMA‑335) by itself, so it is tiny and fast.
 
-![viewer](docs/viewer.png)
+![viewer](docs/demo_main.gif)
 
 ## Why
 
