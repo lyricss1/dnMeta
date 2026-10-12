@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DNMETA // OSINT KERNEL MONITOR</title>
+  <style>
+@CSS@
+  </style>
+</head>
+<body class="term-theme">
+  <!-- HUD Top Header -->
+  <header class="hud-header">
+    <div class="hud-top">
+      <div class="hud-brand">
+        <div class="cyber-status">
+          <span class="status-indicator"></span>
+          <span class="mono">by lyricss1</span>
+        </div>
+        <div class="brand-title">
+          <span class="brand-prefix">//</span>
+          <b>DNMETA</b>
+          <span class="brand-ver">v3.2</span>
+        </div>
+        <div class="game-badge" id="gameBadge">
+          <span class="badge-label">TARGET::</span>
+          <span class="badge-val" id="gameName"></span>
+        </div>
+      </div>
+
+      <!-- Tactical Tabs (No emojis, strict terminal indexing) -->
+      <nav class="hud-nav" id="hudNav">
+        <button class="nav-tab on" data-nav="graph">
+          <span class="tab-idx">[01]</span>
+          <span data-i="tabGraph">NEURAL_MAP</span>
+        </button>
+        <button class="nav-tab" data-nav="explorer">
+          <span class="tab-idx">[02]</span>
+          <span data-i="tabExplorer">DIRECTORY_INDEX</span>
+        </button>
+        <button class="nav-tab" data-nav="cheats">
+          <span class="tab-idx">[03]</span>
+          <span data-i="tabCheats">EXPLOIT_HOOKS</span>
+        </button>
+        <button class="nav-tab" data-nav="modules">
+          <span class="tab-idx">[04]</span>
+          <span data-i="tabModules">NAMESPACES</span>
+        </button>
+      </nav>
+
+      <!-- Meta Group -->
+      <div class="hud-actions">
+        <div class="stat-ticker" id="hudTicker"></div>
+        <select id="asmSel" class="hud-select" title="Assembly"></select>
+        <button class="ghost-btn" id="langBtn">RU</button>
+      </div>
+    </div>
+
+    <!-- Search Console -->
+    <div class="hud-console">
+      <div class="search-bar">
+        <span class="search-glyph">&gt;_</span>
+        <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="QUERY:: search types, fields, methods, signatures...">
+        <div class="key-hint"><kbd>/</kbd></div>
+        <button class="clear-btn" id="clearBtn" title="Clear query">[CLEAR]</button>
+      </div>
+      <div class="hud-bar">
+        <div class="chips" id="chips"></div>
+        <div class="filter-controls">
+          <select id="nsSel" class="hud-select"></select>
+          <label class="hud-switch"><input type="checkbox" id="fPub"><span class="sw-mark"></span><span data-i="pub"></span></label>
+          <label class="hud-switch"><input type="checkbox" id="fStat"><span class="sw-mark"></span><span data-i="stat"></span></label>
+          <label class="hud-switch"><input type="checkbox" id="fCst"><span class="sw-mark"></span><span data-i="cst"></span></label>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Viewport -->
+  <main id="main" class="hud-main"></main>
+
+  <!-- HUD Toast Feedback -->
+  <div id="toast" class="hud-toast"></div>
+
+<script>window.DATA=@DATA@;</script>
+<script>
+@JS@
+</script>
+</body>
+</html>
